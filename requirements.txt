@@ -2,7 +2,7 @@
 # Install: pip install -r requirements.txt
 
 # ── Core Pipecat with required plugins ──────────────────────────────────────
-pipecat-ai[deepgram,openai,kokoro,silero,websockets]>=0.0.105
+pipecat-ai[deepgram,openai,kokoro,silero]>=0.0.105
 
 # ── Kokoro TTS (CPU-only, no GPU needed) ────────────────────────────────────
 soundfile>=0.12.1
