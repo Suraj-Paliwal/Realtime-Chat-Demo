@@ -1,0 +1,74 @@
+HOW TO PUSH THIS PROJECT TO GITHUB
+====================================
+
+STEP 1 — Create a .gitignore (run in terminal inside Demo folder)
+------------------------------------------------------------------
+Open terminal, navigate to the Demo folder:
+
+  cd C:\Users\suraj\Desktop\Demo
+
+Create a .gitignore file to avoid uploading secrets and junk:
+
+  Copy-paste this command in PowerShell or CMD:
+
+    echo .env > .gitignore
+    echo __pycache__/ >> .gitignore
+    echo *.pyc >> .gitignore
+    echo web/node_modules/ >> .gitignore
+    echo *.db >> .gitignore
+    echo .claude/ >> .gitignore
+
+
+STEP 2 — Initialize Git
+------------------------
+Still inside the Demo folder, run:
+
+  git init
+  git add .
+  git commit -m "Initial commit — Jmoshi voice bot"
+
+
+STEP 3 — Create a GitHub Repository
+-------------------------------------
+1. Go to https://github.com/new
+2. Name the repo (e.g. "jmoshi")
+3. Set it to Public or Private
+4. Do NOT check "Add a README" (you already have one)
+5. Click "Create repository"
+
+
+STEP 4 — Push to GitHub
+-------------------------
+GitHub will show you commands after creating the repo. Run these:
+
+  git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+  git branch -M main
+  git push -u origin main
+
+Replace YOUR_USERNAME and YOUR_REPO_NAME with your actual GitHub username and repo name.
+
+
+STEP 5 — Verify
+----------------
+Go to https://github.com/YOUR_USERNAME/YOUR_REPO_NAME
+You should see all your files there.
+
+
+IMPORTANT — Files that will NOT be uploaded (protected by .gitignore):
+-----------------------------------------------------------------------
+  - .env              (contains your API keys — never upload this!)
+  - __pycache__/      (Python bytecode cache)
+  - web/node_modules/ (npm packages — too large, reinstall with: npm install)
+  - *.db              (local SQLite memory database)
+  - .claude/          (Claude Code session files)
+
+
+NOTES FOR ANYONE CLONING THIS REPO
+------------------------------------
+They will need to:
+  1. Copy .env.example to .env and fill in their own API keys
+  2. Run: pip install -r requirements.txt
+  3. Run: cd web && npm install
+  4. Start bot:    python bot.py
+  5. Start client: cd web && npm run dev
+  6. Open browser: http://localhost:5173

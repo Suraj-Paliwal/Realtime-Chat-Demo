@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pipecat Realtime Test</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 700px;
+        margin: 40px auto;
+        padding: 0 16px;
+      }
+      button {
+        padding: 10px 14px;
+        margin-right: 8px;
+        cursor: pointer;
+      }
+      .box {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 12px;
+        min-height: 60px;
+        margin-bottom: 16px;
+      }
+      .label {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 6px;
+      }
+      #status {
+        margin: 16px 0;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pipecat Realtime Test</h1>
+
+    <div>
+      <button id="startBtn">Start</button>
+      <button id="stopBtn" disabled>Stop</button>
+    </div>
+
+    <div id="status">Disconnected</div>
+
+    <div class="label">You said</div>
+    <div id="userText" class="box"></div>
+
+    <div class="label">Bot said</div>
+    <div id="botText" class="box"></div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

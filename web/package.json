@@ -1,0 +1,13 @@
+{
+  "name": "jmoshi-client",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@pipecat-ai/client-js": "latest",
+    "@pipecat-ai/websocket-transport": "^1.6.2",
+    "vite": "^5.4.0"
+  }
+}

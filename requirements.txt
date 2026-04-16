@@ -1,0 +1,18 @@
+# Jmoshi — Pipecat voice stack
+# Install: pip install -r requirements.txt
+
+# ── Core Pipecat with required plugins ──────────────────────────────────────
+pipecat-ai[deepgram,openai,kokoro,silero,websockets]>=0.0.105
+
+# ── Kokoro TTS (CPU-only, no GPU needed) ────────────────────────────────────
+soundfile>=0.12.1
+
+# ── Memory + API layer ───────────────────────────────────────────────────────
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+websockets>=12.0
+python-dotenv>=1.0.0
+
+# ── Utilities ────────────────────────────────────────────────────────────────
+loguru>=0.7.2
+aiohttp>=3.9.5
